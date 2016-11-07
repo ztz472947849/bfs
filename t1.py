@@ -100,7 +100,7 @@ flag_goal=False
 my_depth=0
 #print my_map[0].data
 #temp_check_bits=check_move(3,3)
-while my_depth <= 20:
+while my_depth <= 20 and flag_goal!=True:
 #while my_depth <= 3 and flag_goal != True:   #300levels 0~299
     #if goal(my_map[]):
      #   break
@@ -117,9 +117,10 @@ while my_depth <= 20:
             if goal(my_map[temp_end].data):
                 flag_goal=True
                 print 'Solution Found'
+                print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
                 break
             my_map[temp_end].parent=valid_parent # record parent
-            print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
+            print 'level:', my_depth, 'map:', temp_end#, 'data:', my_map[temp_end].data
             temp_end += 1 # inc. temp_end
             already_run +=1
             #print temp_end
@@ -134,9 +135,10 @@ while my_depth <= 20:
             if goal(my_map[temp_end].data):
                 flag_goal=True
                 print 'Solution Found'
+                print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
                 break
             my_map[temp_end].parent = valid_parent  # record parent
-            print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
+            print 'level:', my_depth, 'map:', temp_end#, 'data:', my_map[temp_end].data
             temp_end += 1  # inc. temp_end
             already_run += 1
             #print my_map[temp_end-1].data
@@ -148,9 +150,10 @@ while my_depth <= 20:
             if goal(my_map[temp_end].data):
                 flag_goal=True
                 print 'Solution Found'
+                print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
                 break
             my_map[temp_end].parent=valid_parent
-            print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
+            print 'level:', my_depth, 'map:', temp_end#, 'data:', my_map[temp_end].data
             temp_end += 1
             already_run += 1
             #print 'L'
@@ -161,10 +164,11 @@ while my_depth <= 20:
             if goal(my_map[temp_end].data):
                 flag_goal=True
                 print 'Solution Found'
+                print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
                 break
 
             my_map[temp_end].parent = valid_parent  # record parent
-            print 'level:', my_depth, 'map:', temp_end, 'data:', my_map[temp_end].data
+            print 'level:', my_depth, 'map:', temp_end#, 'data:', my_map[temp_end].data
             temp_end += 1  # inc. temp_end
             already_run += 1
             #print 'R'
