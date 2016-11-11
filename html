@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>
+		Rob the Bank: 
+		Transactions	</title>
+	<link href="http://192.168.170.169/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Font awesome -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Rob the Bank</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+                <li class=""><a href="http://192.168.170.169//pages/display/about">About</a></li><li class=""><a href="/pages/display/services">Services</a></li><li class=""><a href="/accounts">My Accounts</a></li><li class=""><a href="/transactions">Transactions</a></li><li class=""><a href="/transactions/bill">Pay Bill</a></li><li class=""><a href="/loans">Apply for Loan</a></li><li class=""><a href="/help">Help</a></li><li class=""><a href="/users/logout">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 70px;">
+	<div class="row">
+	<div class="col-md-9">
+			
+			<h2>Make a Transfer</h2>
+
+<form action="http://192.168.170.169/transactions/transfer" class="well" id="TransactionTransferForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+<div class="form-group required"><label for="TransactionFrom">Transfer from account</label><select name="data[Transaction][from]" class="form-control" id="TransactionFrom" required="required">
+<option value="1242" selected="selected">1242</option>
+
+</select></div><div class="form-group required"><label for="TransactionTo">Transfer to account</label><input name="data[Transaction][to]" class="form-control" type="number" id="TransactionTo" required="required"/></div><div class="form-group required"><label for="TransactionReference">Reference</label><input name="data[Transaction][reference]" class="form-control" maxlength="255" type="text" id="TransactionReference" required="required"/></div><div class="form-group required"><label for="TransactionAmount">Amount to transfer</label><input name="data[Transaction][amount]" class="form-control" style="width: 100px" step="any" type="number" id="TransactionAmount" required="required"/></div>
+<div class="form-group"><input  class="btn btn-primary" type="submit" value="Make Transaction"/></div></form>
+
+
+		
+	<div style="text-align: center"><img src="/img/footer.png" style="width: 300px; height: auto;"/></div>
+
+	</div>
+	<div class="col-md-3">
+						<h3>
+<i class="fa fa-glass" style="float: right"></i>
+Rob's Hack Bar
+</h3>
+<style type="text/css">
+.hack {
+	border: 1px solid #c3c3c3;
+	border-radius: 15px;
+	background-color: #f3f3f3;
+	padding: 5px;
+	font-size: 80%;
+	margin: 5px;
+}
+.hack.title {
+
+}
+.notfound {
+	float: right;
+	color: red;
+	opacity: 0.5;
+}
+.found {
+	float: right;
+	color: green;
+	opacity: 0.5;
+}
+.hackfound {
+	background-color: #dff0d8;
+}
+</style>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #1</strong>
+</div>
+<div class="title">Out of order</div>
+<div class="links"><a href="/hacks/edit/1">Fill in details</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #2</strong>
+</div>
+<div class="title">Testing..1..2..32</div>
+<div class="links"><a href="/hacks/edit/2">Fill in details</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #3</strong>
+</div>
+<div class="title">Oldest trick in the book</div>
+<div class="links"><a href="/hacks/edit/3">Fill in details</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #4</strong>
+</div>
+<div class="title">Don't trust gifts from strangers</div>
+<div class="links"><a href="/hacks/edit/4">Fill in details</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #5</strong>
+</div>
+<div class="title">Close your eyes</div>
+<div class="links"><a href="/hacks/edit/5">Fill in details</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #6</strong>
+</div>
+<div class="title">I have a clipboard</div>
+<div class="links"><a href="javascript:alert('I will just walk right through your authorisation');">Description</a> | <a href="javascript:alert('We know what framework is being used - does it have any common conventions?');">Hint</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #7</strong>
+</div>
+<div class="title">A/S/L?</div>
+<div class="links"><a href="/hacks/edit/7">Fill in details</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #8</strong>
+</div>
+<div class="title">Let me fix that for you</div>
+<div class="links"><a href="javascript:alert('Sometimes none of the above is a perfectly valid option');">Description</a> | <a href="javascript:alert('A little bit of form parameter manipulation never hurt anyone, but sometimes it benefits us');">Hint</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #9</strong>
+</div>
+<div class="title">That would be illogical</div>
+<div class="links"><a href="javascript:alert('Humans aren\'t always logical creatures, much to a Vulcan or web developers dismay');">Description</a> | <a href="javascript:alert('Taking advantage of wizards to work your magic');">Hint</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #10</strong>
+</div>
+<div class="title">Procrastination</div>
+<div class="links"><a href="/hacks/edit/10">Fill in details</a></div>
+</div>
+<div class="hack hackfound">
+<div class="title">
+<span class="found"><i class="fa fa-check"></i></span>
+<strong>Hack #11</strong>
+</div>
+<div class="title">Help me help you</div>
+<div class="links"><a href="/hacks/edit/11">Fill in details</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #12</strong>
+</div>
+<div class="title">Chocolate Chip</div>
+<div class="links"><a href="javascript:alert('???');">Description</a> | <a href="javascript:alert('It isnt the CakePHP cookie...');">Hint</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #13</strong>
+</div>
+<div class="title">Let me show you to the door</div>
+<div class="links"><a href="javascript:alert('???');">Description</a> | <a href="javascript:alert('You don\'t have to be highway maintenance to drop a diversion sign on a road');">Hint</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #14</strong>
+</div>
+<div class="title">Appathetic</div>
+<div class="links"><a href="javascript:alert('???');">Description</a> | <a href="javascript:alert('What do most apps use to communicate with the main site?');">Hint</a></div>
+</div>
+<div class="hack">
+<div class="title">
+<span class="notfound"><i class="fa fa-times"></i></span>
+<strong>Hack #15</strong>
+</div>
+<div class="title">Horn of plenty</div>
+<div class="links"><a href="javascript:alert('???');">Description</a> | <a href="javascript:alert('I like vim');">Hint</a></div>
+</div>
+	
+
+<p style="text-align: center">
+<a href="/hacks/download" class="btn btn-success">Submit</a>	
+</p>
+			</div>
+	</div>
+</div><!-- /.container -->
+
+  </body>
+</html>
