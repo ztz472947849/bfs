@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2><p>COMP6233 average mark calculator</p></h2>
+
+Quiz<br><input type="text" id="q" required>out of 20<br>
+Debate<br><input type="text" id="d"required>out of 100<br>
+Presentation<br><input type="text" id="p" required>out of 30<br><br>
+<button onclick="cal()">Calculate</button>
+
+<script>
+function cal()
+{
+ var q = document.getElementById("q").value;
+ var d = document.getElementById("d").value;
+ var p = document.getElementById("p").value;
+ var r = d*3/10 + q*3/2 + p*4/3;
+ document.getElementById("r").innerHTML = 'Ur average marks is '+ r;
+}
+</script>
+<br>
+<p>average mark = D*3/10 + Q*3/2 + P*4/3</p>
+<br>
+*Type in exactly what u got in the email [without any conversion], scripts help you to do that. U may find required vaules in two separate emails.<br>
+<h1><p style="color:#FF0000" id="r"></p></h1>
+</body>
+</html>
